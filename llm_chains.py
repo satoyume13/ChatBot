@@ -38,7 +38,7 @@ def create_prompt_from_template(template):
 def create_llm_chain(llm, chat_prompt, memory):
   return LLMChain(llm= llm, prompt= chat_prompt,memory= memory)
 
-def load_normal_chain():
+def load_normal_chain(chat_history):
   return chatChain()
   
 def create_chain(chat_history):
