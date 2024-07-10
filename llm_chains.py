@@ -12,7 +12,7 @@ from langchain_community.llms import CTransformers
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
 from operator import itemgetter
-from  modules.utils import load_config
+
 import chromadb
 import yaml
 
@@ -39,7 +39,7 @@ def create_llm_chain(llm, chat_prompt, memory):
   return LLMChain(llm= llm, prompt= chat_prompt,memory= memory)
 
 def load_normal_chain(chat_history):
-  return chatChain()
+  return chatChain(chat_history)
   
 def create_chain(chat_history):
   return chatChain(chat_history)
