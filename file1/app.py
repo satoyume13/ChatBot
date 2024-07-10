@@ -14,10 +14,10 @@ def main():
     chat_container = st.container()
 
     if 'send_input' not in st.session_state:
-        st.session_state.user_input=    False
+        st.session_state.user_input= False
         st.session_state.user_qution = ''
 
-    user_input = st.text_input('type your message here', key='user_input')
+    user_input = st.text_input('type your message here', key='user_input', on_change =set_send_input)
 
     send_button = st.button('Send', key='send_button')
 
@@ -25,8 +25,8 @@ def main():
         if st.session_state.user_qution != '':
             llm_response = 'This is a response from LLM model'
             with chat_container:
-              st.chat_message('user').write(st.session_state.user_qution)   
-              st.chat_message('ai').write('here is an answer')
+               st.chat_message('user').write(st.session_state.user_qution)   
+               st.chat_message('ai').write('here is an answer')
 
 if __name__ == '__main__':
     main()
