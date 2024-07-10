@@ -39,7 +39,7 @@ def main():
                st.chat_message('user').write(st.session_state.user_qution)   
                llm_response = llm_chain.run(st.session_state.user_qution)
                st.chat_message('ai').write(llm_response)
-               if st.session_state.user_qution = '':
+               st.session_state.user_qution = ''
 
 if __name__ == '__main__':
     main()
