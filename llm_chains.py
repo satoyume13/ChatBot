@@ -13,7 +13,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
 from operator import itemgetter
 
-import chromadb
+
 import yaml
 
 
