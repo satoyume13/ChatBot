@@ -12,7 +12,7 @@ from langchain_community.llms import CTransformers
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
 from operator import itemgetter
-from utils import load_config
+from  modules.utils import load_config
 import chromadb
 import yaml
 
