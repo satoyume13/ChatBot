@@ -14,7 +14,7 @@ def main():
     chat_container = st.container()
 
     if 'send_input' not in st.session_state:
-        st.session_state.user_input= False
+        st.session_state.send_input= False
         st.session_state.user_qution = ''
 
     user_input = st.text_input('type your message here', key='user_input', on_change =set_send_input)
