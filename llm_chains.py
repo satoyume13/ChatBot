@@ -20,13 +20,13 @@ import yaml
 with open('./config.yyaml','r') as f:
     config = yaml.safe_load(f)
   
-def create_llm(model_path = config['model_path']['large'], model_type = config['model_path'],model_config= 
- config['model_config']):
+def create_llm(model_path = config['model_path']['large'], model_type = config['model_type'], model_config= 
+   config['model_config']):
   llm = CTransformers(model=model_path,model_type= model_type,config= model_config)
   return llm
 
 def create_embeddings(embeddings_path = config['embeddings_path']):
-  return HuggingFaceInstructEmbeddings(embeddings_path) 
+  return HuggingFaceInstructEmbeddings(model_name=embeddings_path) 
 
 def create_chat_memory(chat_history):
   return ConversationBufferWindowMemory(memory_key= 'history', chat_memory= chat_history, k=3)
