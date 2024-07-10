@@ -17,7 +17,7 @@ def main():
         st.session_state.user_input=    False
         st.session_state.user_qution = ''
 
-    user_input = st.text_input('type your message here', key='user_input', on_change= set_send_input)
+    user_input = st.text_input('type your message here', key='user_input')
 
     send_button = st.button('Send', key='send_button')
 
